@@ -1,25 +1,19 @@
-# BATTLESHIP GAME - GROUP PROJECT
-# Team Members: Edrick, Jane, Felsal, Kiptoo
+# Characters
+wizard = "Wizard"
+elf = "Elf"
+human = "Human"
 
-# EDRICK'S SECTION - Task 1: Game Setup & Variables
-class Character:
-    def __init__(self, name, hp, damage):
-        self.name = name
-        self.hp = hp
-        self.damage = damage
+# Health Points
+wizard_hp = 70
+elf_hp = 100
+human_hp = 150
 
-class Dragon:
-    def __init__(self, hp, damage):
-        self.hp = hp
-        self.damage = damage
+# Damage
+wizard_damage = 150
+elf_damage = 100
+human_damage = 20
 
-def setup_game_stats():
-    
-    characters = {
-        "wizard": Character("Wizard", 70, 150),
-        "elf": Character("Elf", 100, 100),
-        "human": Character("Human", 150, 20)
-    }
-    dragon = Dragon(300, 50)
-    return characters, dragon
+# Dragon stats
+dragon_hp = 300
+dragon_damage = 50
 
