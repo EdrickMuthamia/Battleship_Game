@@ -1,25 +1,22 @@
-from battlegame import Character, Dragon, setup_game_stats
-
 # -----------------------------------
-# Battle with the Dragon
+# Branch: kiptoo-battle
 # -----------------------------------
-def battle_begins(player: Character, dragon: Dragon):
-    while True:
-        # Player attacks
-        dragon.hp = dragon.hp - player.damage
-        print(f"{player.name} attacked the Dragon for {player.damage} damage!")
-        print(f"Dragon's HP is now: {dragon.hp}")
 
-        if dragon.hp <= 0:
-            print("The Dragon has been defeated! You win!")
-            break
+while True:
+    # Player's turn
+    dragon_hp = dragon_hp - my_damage
+    print(f"The {char} damaged the Dragon!")
+    print(f"Dragon's HP is now: {dragon_hp}")
 
-        # Dragon attacks
-        # player.hp -= dragon.damage
-        player.hp = player.damage-dragon.damage
-        print(f"The Dragon attacked {player.name} for {dragon.damage} damage!")
-        print(f"{player.name}'s HP is now: {player.hp}\n")
+    if dragon_hp <= 0:
+        print("The Dragon has lost the battle!")
+        break
 
-        if player.hp <= 0:
-            print(f" {player.name} has fallen. You lose!")
-            break
+    # Dragon's turn
+    player_hp = player_hp - dragon_damage
+    print(f"The Dragon damaged the {char}!")
+    print(f"{char}'s HP is now: {player_hp}\n")
+
+    if player_hp <= 0:
+        print(f"The {char} has lost the battle!")
+        break
