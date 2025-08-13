@@ -6,7 +6,7 @@ from battlegame import Character, Dragon, setup_game_stats
 def battle_begins(player: Character, dragon: Dragon):
     while True:
         # Player attacks
-        dragon.hp -= player.damage
+        dragon.hp = dragon.hp - player.damage
         print(f"{player.name} attacked the Dragon for {player.damage} damage!")
         print(f"Dragon's HP is now: {dragon.hp}")
 
@@ -15,7 +15,8 @@ def battle_begins(player: Character, dragon: Dragon):
             break
 
         # Dragon attacks
-        player.hp -= dragon.damage
+        # player.hp -= dragon.damage
+        player.hp = player.damage-dragon.damage
         print(f"The Dragon attacked {player.name} for {dragon.damage} damage!")
         print(f"{player.name}'s HP is now: {player.hp}\n")
 
